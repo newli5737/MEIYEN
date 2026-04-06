@@ -13,10 +13,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: `MEIYEN - ${t('heroSubtitle')}`,
     description: t('heroTitle'),
+    metadataBase: new URL('https://meiyen.vercel.app'),
     alternates: {
+      canonical: `/${locale}`,
       languages: {
         'en': '/en',
         'zh-TW': '/zh-TW',
+        'x-default': '/zh-TW',
       },
     },
   };
