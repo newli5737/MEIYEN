@@ -153,6 +153,7 @@ export default function Home() {
             src="https://images.unsplash.com/photo-1677726050511-48866c4a64d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsJTIwYmVhdXR5JTIwYWVzdGhldGljJTIwYmVpZ2V8ZW58MXx8fHwxNzczNTQ0MDg4fDA&ixlib=rb-4.1.0&q=80&w=1080"
             alt="Hero"
             className="w-full h-full object-cover opacity-80"
+            priority={true}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-white/60 to-transparent"></div>
         </div>

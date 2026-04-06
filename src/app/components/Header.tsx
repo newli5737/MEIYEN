@@ -62,7 +62,7 @@ export function Header() {
 
           {/* Right Icons */}
           <div className="flex items-center space-x-6">
-            <button className="text-gray-700 hover:text-[var(--gold)] transition-colors">
+            <button aria-label="Search" className="text-gray-700 hover:text-[var(--gold)] transition-colors">
               <Search className="w-5 h-5" />
             </button>
             <select
@@ -74,7 +74,8 @@ export function Header() {
               <option value="zh-TW" className="text-gray-900">繁體</option>
             </select>
             <button
-              className="lg:hidden text-gray-700"
+              aria-label="Toggle Navigation Menu"
+              className="lg:hidden text-gray-700 cursor-pointer"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

@@ -12,11 +12,13 @@ export function ReviewCard({ name, avatar, rating, review }: ReviewCardProps) {
   return (
     <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
       <div className="flex items-center mb-4">
-        <ImageWithFallback
-          src={avatar}
-          alt={name}
-          className="w-12 h-12 rounded-full object-cover mr-4"
-        />
+        <div className="relative w-12 h-12 mr-4 flex-shrink-0">
+          <ImageWithFallback
+            src={avatar}
+            alt={name}
+            className="rounded-full object-cover"
+          />
+        </div>
         <div>
           <h4>{name}</h4>
           <div className="flex items-center space-x-1 mt-1">

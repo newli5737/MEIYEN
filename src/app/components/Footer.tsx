@@ -17,13 +17,13 @@ export function Footer() {
               {t('brandDesc')}
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-600 hover:text-[var(--gold)] transition-colors">
+              <a href="#" aria-label="Facebook" className="text-gray-600 hover:text-[var(--gold)] transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-600 hover:text-[var(--gold)] transition-colors">
+              <a href="#" aria-label="Instagram" className="text-gray-600 hover:text-[var(--gold)] transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-600 hover:text-[var(--gold)] transition-colors">
+              <a href="#" aria-label="Youtube" className="text-gray-600 hover:text-[var(--gold)] transition-colors">
                 <Youtube className="w-5 h-5" />
               </a>
             </div>
