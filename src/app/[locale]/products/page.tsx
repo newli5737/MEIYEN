@@ -30,7 +30,7 @@ export default function Products() {
     {
       id: 1,
       name: getProductName('Serum Phục Hồi Chống Lão Hóa'),
-      price: 2500000,
+      price: 3200,
       image: 'https://images.unsplash.com/photo-1770732766528-d0e9fd0df233?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcmVtaXVtJTIwYmVhdXR5JTIwc2VydW0lMjBwcm9kdWN0fGVufDF8fHx8MTc3MzU0NDA4MHww&ixlib=rb-4.1.0&q=80&w=1080',
       rating: 5,
       category: 'skincare',
@@ -38,7 +38,7 @@ export default function Products() {
     {
       id: 2,
       name: getProductName('Kem Dưỡng Ẩm Cao Cấp'),
-      price: 1890000,
+      price: 2400,
       image: 'https://images.unsplash.com/photo-1772191530787-b9546da02fbc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGVnYW50JTIwZmFjZSUyMGNyZWFtJTIwamFyfGVufDF8fHx8MTc3MzU0NDA4MHww&ixlib=rb-4.1.0&q=80&w=1080',
       rating: 5,
       category: 'skincare',
@@ -46,7 +46,7 @@ export default function Products() {
     {
       id: 3,
       name: getProductName('Son Môi Luxury Collection'),
-      price: 990000,
+      price: 1200,
       image: 'https://images.unsplash.com/photo-1770981773328-63c2ad10013d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoaWdoLWVuZCUyMGxpcHN0aWNrJTIwY29zbWV0aWN8ZW58MXx8fHwxNzczNTQ0MDgxfDA&ixlib=rb-4.1.0&q=80&w=1080',
       rating: 5,
       category: 'makeup',
@@ -54,7 +54,7 @@ export default function Products() {
     {
       id: 4,
       name: getProductName('Nước Hoa Eau de Parfum'),
-      price: 3200000,
+      price: 4100,
       image: 'https://images.unsplash.com/photo-1719175936556-dbd05e415913?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBwZXJmdW1lJTIwYm90dGxlfGVufDF8fHx8MTc3MzUwNDM1MXww&ixlib=rb-4.1.0&q=80&w=1080',
       rating: 5,
       category: 'fragrance',
@@ -62,7 +62,7 @@ export default function Products() {
     {
       id: 5,
       name: getProductName('Sữa Rửa Mặt Làm Sạch Sâu'),
-      price: 890000,
+      price: 1100,
       image: 'https://images.unsplash.com/photo-1751110131615-ee32e45a100d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBza2luY2FyZSUyMGNvc21ldGljcyUyMGJvdHRsZXxlbnwxfHx8fDE3NzM1NDQwNzl8MA&ixlib=rb-4.1.0&q=80&w=1080',
       rating: 5,
       category: 'skincare',
@@ -70,7 +70,7 @@ export default function Products() {
     {
       id: 6,
       name: getProductName('Kem Nền Mịn Lì Hoàn Hảo'),
-      price: 1290000,
+      price: 1600,
       image: 'https://images.unsplash.com/photo-1527632911563-ee5b6d53465b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBtYWtldXAlMjBmb3VuZGF0aW9ufGVufDF8fHx8MTc3MzU0NDA4MXww&ixlib=rb-4.1.0&q=80&w=1080',
       rating: 4,
       category: 'makeup',
@@ -78,7 +78,7 @@ export default function Products() {
     {
       id: 7,
       name: getProductName('Sữa Dưỡng Thể Luxury'),
-      price: 1450000,
+      price: 1850,
       image: 'https://images.unsplash.com/photo-1760647422523-f532034a49ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcmVtaXVtJTIwYm9keSUyMGxvdGlvbiUyMGJvdHRsZXxlbnwxfHx8fDE3NzM1NDQwODN8MA&ixlib=rb-4.1.0&q=80&w=1080',
       rating: 5,
       category: 'bodycare',
@@ -86,7 +86,7 @@ export default function Products() {
     {
       id: 8,
       name: getProductName('Bộ Quà Tặng Skincare Premium'),
-      price: 4500000,
+      price: 5600,
       image: 'https://images.unsplash.com/photo-1765887986673-953fccf56464?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBza2luY2FyZSUyMGdpZnQlMjBzZXR8ZW58MXx8fHwxNzczNTQ0MDgzfDA&ixlib=rb-4.1.0&q=80&w=1080',
       rating: 5,
       category: 'sets',

@@ -76,7 +76,7 @@ export default function ProductDetail(props: { params: Promise<{ id: string }> }
   const product = {
     id: Number(id),
     name: translatedContent.name,
-    price: 2500000,
+    price: 3200,
     description: translatedContent.description,
     rating: 5,
     reviews: 127,
@@ -95,21 +95,21 @@ export default function ProductDetail(props: { params: Promise<{ id: string }> }
     {
       id: 2,
       name: locale === 'en' ? 'Premium Moisturizer' : locale === 'zh-TW' ? '高級保濕霜' : 'Kem Dưỡng Ẩm Cao Cấp',
-      price: 1890000,
+      price: 2400,
       image: 'https://images.unsplash.com/photo-1772191530787-b9546da02fbc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGVnYW50JTIwZmFjZSUyMGNyZWFtJTIwamFyfGVufDF8fHx8MTc3MzU0NDA4MHww&ixlib=rb-4.1.0&q=80&w=1080',
       rating: 5,
     },
     {
       id: 5,
       name: locale === 'en' ? 'Deep Cleansing Foam' : locale === 'zh-TW' ? '深層清潔洗面乳' : 'Sữa Rửa Mặt Làm Sạch Sâu',
-      price: 890000,
+      price: 1200,
       image: 'https://images.unsplash.com/photo-1751110131615-ee32e45a100d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBza2luY2FyZSUyMGNvc21ldGljcyUyMGJvdHRsZXxlbnwxfHx8fDE3NzM1NDQwNzl8MA&ixlib=rb-4.1.0&q=80&w=1080',
       rating: 5,
     },
     {
       id: 4,
       name: locale === 'en' ? 'Eau de Parfum' : locale === 'zh-TW' ? '淡香精' : 'Nước Hoa Eau de Parfum',
-      price: 3200000,
+      price: 4100,
       image: 'https://images.unsplash.com/photo-1719175936556-dbd05e415913?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBwZXJmdW1lJTIwYm90dGxlfGVufDF8fHx8MTc3MzUwNDM1MXww&ixlib=rb-4.1.0&q=80&w=1080',
       rating: 5,
     },
@@ -211,7 +211,7 @@ export default function ProductDetail(props: { params: Promise<{ id: string }> }
                 className="text-3xl mb-6"
                 style={{ fontFamily: "'Cormorant Garamond', serif" }}
               >
-                {product.price.toLocaleString('vi-VN')}đ
+                NT$ {product.price.toLocaleString()}
               </p>
 
               <p className="text-gray-600 leading-relaxed mb-6">

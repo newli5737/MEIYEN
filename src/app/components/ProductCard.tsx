@@ -48,7 +48,7 @@ export function ProductCard({ id, name, price, image, rating = 5, category }: Pr
         
         <div className="flex items-center justify-between">
           <p className="text-lg" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-            {price.toLocaleString('vi-VN')}đ
+            NT$ {price.toLocaleString()}
           </p>
           <button className="bg-[var(--pink-pastel)] hover:bg-[var(--gold)] text-gray-800 hover:text-white p-3 rounded-full transition-all duration-300 shadow-sm hover:shadow-md">
             <ShoppingCart className="w-4 h-4" />

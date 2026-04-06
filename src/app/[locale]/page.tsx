@@ -44,7 +44,7 @@ export default function Home() {
     {
       id: 1,
       name: getProductName('Serum Phục Hồi Chống Lão Hóa'),
-      price: 2500000,
+      price: 3200,
       image: 'https://images.unsplash.com/photo-1770732766528-d0e9fd0df233?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcmVtaXVtJTIwYmVhdXR5JTIwc2VydW0lMjBwcm9kdWN0fGVufDF8fHx8MTc3MzU0NDA4MHww&ixlib=rb-4.1.0&q=80&w=1080',
       rating: 5,
       category: 'Bestseller',
@@ -52,7 +52,7 @@ export default function Home() {
     {
       id: 2,
       name: getProductName('Kem Dưỡng Ẩm Cao Cấp'),
-      price: 1890000,
+      price: 2400,
       image: 'https://images.unsplash.com/photo-1772191530787-b9546da02fbc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGVnYW50JTIwZmFjZSUyMGNyZWFtJTIwamFyfGVufDF8fHx8MTc3MzU0NDA4MHww&ixlib=rb-4.1.0&q=80&w=1080',
       rating: 5,
       category: 'New',
@@ -60,14 +60,14 @@ export default function Home() {
     {
       id: 3,
       name: getProductName('Son Môi Luxury Collection'),
-      price: 990000,
+      price: 1200,
       image: 'https://images.unsplash.com/photo-1770981773328-63c2ad10013d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoaWdoLWVuZCUyMGxpcHN0aWNrJTIwY29zbWV0aWN8ZW58MXx8fHwxNzczNTQ0MDgxfDA&ixlib=rb-4.1.0&q=80&w=1080',
       rating: 5,
     },
     {
       id: 4,
       name: getProductName('Nước Hoa Eau de Parfum'),
-      price: 3200000,
+      price: 4100,
       image: 'https://images.unsplash.com/photo-1719175936556-dbd05e415913?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBwZXJmdW1lJTIwYm90dGxlfGVufDF8fHx8MTc3MzUwNDM1MXww&ixlib=rb-4.1.0&q=80&w=1080',
       rating: 5,
     },
