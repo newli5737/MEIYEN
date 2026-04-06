@@ -17,15 +17,7 @@ export function Footer() {
               {t('brandDesc')}
             </p>
             <div className="flex space-x-4">
-              <a href="#" aria-label="Facebook" className="text-gray-600 hover:text-[var(--gold)] transition-colors">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" aria-label="Instagram" className="text-gray-600 hover:text-[var(--gold)] transition-colors">
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a href="#" aria-label="Youtube" className="text-gray-600 hover:text-[var(--gold)] transition-colors">
-                <Youtube className="w-5 h-5" />
-              </a>
+              {/* Removed empty social links as requested */}
             </div>
           </div>
 
@@ -43,11 +35,11 @@ export function Footer() {
           {/* Customer Service */}
           <div>
             <h4 className="mb-4">{t('policies')}</h4>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-600 text-sm hover:text-[var(--gold)] transition-colors">{t('returnPolicy')}</a></li>
-              <li><a href="#" className="text-gray-600 text-sm hover:text-[var(--gold)] transition-colors">{t('privacy')}</a></li>
-              <li><a href="#" className="text-gray-600 text-sm hover:text-[var(--gold)] transition-colors">{t('terms')}</a></li>
-              <li><a href="#" className="text-gray-600 text-sm hover:text-[var(--gold)] transition-colors">{t('buyingGuide')}</a></li>
+            <ul className="space-y-3">
+              <li><span className="text-gray-600 text-sm">{t('returnPolicy')}</span></li>
+              <li><span className="text-gray-600 text-sm">{t('privacy')}</span></li>
+              <li><span className="text-gray-600 text-sm">{t('terms')}</span></li>
+              <li><span className="text-gray-600 text-sm">{t('buyingGuide')}</span></li>
             </ul>
           </div>
 
