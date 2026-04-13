@@ -30,7 +30,7 @@ export default function Home() {
       name: getProductName('Sublingual Methylated B-Complex'),
       price: 6800,
       image: '/images/products/b-complex/0.png',
-      rating: 5,
+      rating: 5.0,
       categories: ['cat_nervous_system'],
     },
     {
@@ -39,7 +39,7 @@ export default function Home() {
       name: getProductName('Sublingual Anagen Advanced'),
       price: 6400,
       image: '/images/products/anagen-advanced/0.png',
-      rating: 5,
+      rating: 4.9,
       categories: ['cat_hair_regeneration'],
     },
     {
@@ -48,7 +48,7 @@ export default function Home() {
       name: getProductName('Sublingual NAD+ Cellular Energy Production'),
       price: 7200,
       image: '/images/products/sublingual-nad-cellular-energy-production/0.png',
-      rating: 5,
+      rating: 4.6,
       categories: ['cat_energy_support'],
     },
     {
@@ -57,7 +57,7 @@ export default function Home() {
       name: getProductName('Sublingual Glutathione'),
       price: 6400,
       image: '/images/products/sublingual-glutathione/0.png',
-      rating: 5,
+      rating: 4.6,
       categories: ['cat_lifestyle_recovery'],
     },
   ];
@@ -89,19 +89,19 @@ export default function Home() {
     {
       name: 'Mei-Ling Chen',
       avatar: 'https://images.unsplash.com/photo-1718999398032-8fc0a58ed9c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b21hbiUyMGFzaWFuJTIwYmVhdXR5JTIwcG9ydHJhaXR8ZW58MXx8fHwxNzczNTQ0MDg0fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      rating: 5,
+      rating: 4.6,
       review: locale === 'en' ? 'Amazing product! My skin has noticeably improved after 2 weeks of using the serum. Luxurious packaging, elegant scent.' : locale === 'zh-TW' ? '產品太棒了！使用精華液 2 週後，我的肌膚明顯改善。包裝奢華，香味優雅。' : 'Sản phẩm tuyệt vời!...',
     },
     {
       name: 'Sarah Johnson',
       avatar: 'https://images.unsplash.com/photo-1646526802761-98046c6f1f53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGVnYW50JTIwd29tYW4lMjBiZWF1dHklMjBwb3J0cmFpdHxlbnwxfHx8fDE3NzM1NDQwODd8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      rating: 5,
+      rating: 4.7,
       review: locale === 'en' ? 'Premium quality worth the price. Moisturizer absorbs quickly, non-greasy. Absolutely love this line!' : locale === 'zh-TW' ? '物超所值的高品質。保濕霜吸收快，不油膩。非常喜歡這個系列！' : 'Chất lượng cao cấp...',
     },
     {
       name: 'Wei-Ting Lin',
       avatar: 'https://images.unsplash.com/photo-1736309530611-1cfd1e6602b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxza2luY2FyZSUyMGJlYXV0eSUyMGxpZmVzdHlsZSUyMHdvbWFufGVufDF8fHx8MTc3MzU0NDA4Mnww&ixlib=rb-4.1.0&q=80&w=1080',
-      rating: 5,
+      rating: 4.7,
       review: locale === 'en' ? 'Excellent customer service, fast delivery. Product is exactly as described, quality exceeds expectations.' : locale === 'zh-TW' ? '出色的客戶服務，交貨快。產品與描述完全一致，質量超出預期。' : 'Dịch vụ khách hàng...',
     },
   ];
@@ -222,10 +222,11 @@ export default function Home() {
               </p>
               <Link
                 href="/about"
-                aria-label={t('brandStory')}
-                className="inline-flex items-center text-[var(--gold)] hover:text-[var(--gold-light)] transition-colors"
+                title={t('brandStory')}
+                className="inline-flex items-center text-[var(--gold)] hover:text-[var(--gold-light)] hover:underline transition-all"
               >
-                {t('learnMore')}
+                <span>{t('learnMore')}</span>
+                <span className="sr-only"> - {t('brandStory')}</span>
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </div>

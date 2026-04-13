@@ -56,7 +56,7 @@ export function ProductCard({ id, slug, name, price, image, images, rating = 5, 
               }`}
             />
           ))}
-          <span className="text-sm text-gray-600 ml-2">({rating}.0)</span>
+          <span className="text-sm text-gray-600 ml-2">({rating.toFixed(1)})</span>
         </div>
         
         <div className="flex items-center">
