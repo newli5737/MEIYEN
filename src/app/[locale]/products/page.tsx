@@ -5,6 +5,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import { SlidersHorizontal } from 'lucide-react';
 import { ProductCard } from '../../components/ProductCard';
 import { Newsletter } from '../../components/Newsletter';
+import { productsData } from '../../../data/products';
 
 export default function Products() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -12,98 +13,23 @@ export default function Products() {
   const t = useTranslations('Products');
   const locale = useLocale();
 
-  const getProductName = (viName: string) => {
-    const translations: Record<string, Record<string, string>> = {
-      'Serum Phục Hồi Chống Lão Hóa': { en: 'Anti-aging Repair Serum', 'zh-TW': '抗衰老修護精華' },
-      'Kem Dưỡng Ẩm Cao Cấp': { en: 'Premium Moisturizer', 'zh-TW': '高級保濕霜' },
-      'Son Môi Luxury Collection': { en: 'Luxury Collection Lipstick', 'zh-TW': '奢華系列唇膏' },
-      'Nước Hoa Eau de Parfum': { en: 'Eau de Parfum', 'zh-TW': '淡香精' },
-      'Sữa Rửa Mặt Làm Sạch Sâu': { en: 'Deep Cleansing Foam', 'zh-TW': '深層清潔洗面乳' },
-      'Kem Nền Mịn Lì Hoàn Hảo': { en: 'Flawless Matte Foundation', 'zh-TW': '完美霧面粉底液' },
-      'Sữa Dưỡng Thể Luxury': { en: 'Luxury Body Lotion', 'zh-TW': '奢華身體乳' },
-      'Bộ Quà Tặng Skincare Premium': { en: 'Premium Skincare Gift Set', 'zh-TW': '高級護膚禮盒' },
-    };
-    return translations[viName]?.[locale] || viName;
+  const getProductName = (name: string) => {
+    return name;
   };
 
-  const allProducts = [
-    {
-      id: 1,
-      name: getProductName('Serum Phục Hồi Chống Lão Hóa'),
-      price: 3200,
-      image: 'https://images.unsplash.com/photo-1770732766528-d0e9fd0df233?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcmVtaXVtJTIwYmVhdXR5JTIwc2VydW0lMjBwcm9kdWN0fGVufDF8fHx8MTc3MzU0NDA4MHww&ixlib=rb-4.1.0&q=80&w=1080',
-      rating: 5,
-      category: 'skincare',
-    },
-    {
-      id: 2,
-      name: getProductName('Kem Dưỡng Ẩm Cao Cấp'),
-      price: 2400,
-      image: 'https://images.unsplash.com/photo-1772191530787-b9546da02fbc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGVnYW50JTIwZmFjZSUyMGNyZWFtJTIwamFyfGVufDF8fHx8MTc3MzU0NDA4MHww&ixlib=rb-4.1.0&q=80&w=1080',
-      rating: 5,
-      category: 'skincare',
-    },
-    {
-      id: 3,
-      name: getProductName('Son Môi Luxury Collection'),
-      price: 1200,
-      image: 'https://images.unsplash.com/photo-1770981773328-63c2ad10013d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoaWdoLWVuZCUyMGxpcHN0aWNrJTIwY29zbWV0aWN8ZW58MXx8fHwxNzczNTQ0MDgxfDA&ixlib=rb-4.1.0&q=80&w=1080',
-      rating: 5,
-      category: 'makeup',
-    },
-    {
-      id: 4,
-      name: getProductName('Nước Hoa Eau de Parfum'),
-      price: 4100,
-      image: 'https://images.unsplash.com/photo-1719175936556-dbd05e415913?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBwZXJmdW1lJTIwYm90dGxlfGVufDF8fHx8MTc3MzUwNDM1MXww&ixlib=rb-4.1.0&q=80&w=1080',
-      rating: 5,
-      category: 'fragrance',
-    },
-    {
-      id: 5,
-      name: getProductName('Sữa Rửa Mặt Làm Sạch Sâu'),
-      price: 1100,
-      image: 'https://images.unsplash.com/photo-1751110131615-ee32e45a100d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBza2luY2FyZSUyMGNvc21ldGljcyUyMGJvdHRsZXxlbnwxfHx8fDE3NzM1NDQwNzl8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      rating: 5,
-      category: 'skincare',
-    },
-    {
-      id: 6,
-      name: getProductName('Kem Nền Mịn Lì Hoàn Hảo'),
-      price: 1600,
-      image: 'https://images.unsplash.com/photo-1527632911563-ee5b6d53465b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBtYWtldXAlMjBmb3VuZGF0aW9ufGVufDF8fHx8MTc3MzU0NDA4MXww&ixlib=rb-4.1.0&q=80&w=1080',
-      rating: 4,
-      category: 'makeup',
-    },
-    {
-      id: 7,
-      name: getProductName('Sữa Dưỡng Thể Luxury'),
-      price: 1850,
-      image: 'https://images.unsplash.com/photo-1760647422523-f532034a49ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcmVtaXVtJTIwYm9keSUyMGxvdGlvbiUyMGJvdHRsZXxlbnwxfHx8fDE3NzM1NDQwODN8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      rating: 5,
-      category: 'bodycare',
-    },
-    {
-      id: 8,
-      name: getProductName('Bộ Quà Tặng Skincare Premium'),
-      price: 5600,
-      image: 'https://images.unsplash.com/photo-1765887986673-953fccf56464?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBza2luY2FyZSUyMGdpZnQlMjBzZXR8ZW58MXx8fHwxNzczNTQ0MDgzfDA&ixlib=rb-4.1.0&q=80&w=1080',
-      rating: 5,
-      category: 'sets',
-    },
-  ];
+  const allProducts = productsData;
 
   const filteredProducts = allProducts.filter((product) => {
-    if (selectedCategory !== 'all' && product.category !== selectedCategory) {
+    if (selectedCategory !== 'all' && (!product.categories || !product.categories.includes(selectedCategory))) {
       return false;
     }
-    if (priceRange === 'under1m' && product.price >= 1000000) {
+    if (priceRange === 'under5k' && product.price >= 5000) {
       return false;
     }
-    if (priceRange === '1m-2m' && (product.price < 1000000 || product.price >= 2000000)) {
+    if (priceRange === '5k-7k' && (product.price < 5000 || product.price >= 7000)) {
       return false;
     }
-    if (priceRange === 'over2m' && product.price < 2000000) {
+    if (priceRange === 'over7k' && product.price < 7000) {
       return false;
     }
     return true;
@@ -141,14 +67,33 @@ export default function Products() {
                 {/* Category Filter */}
                 <div className="mb-6">
                   <h4 className="mb-3 text-sm">{t('category')}</h4>
-                  <div className="space-y-2">
+                  <div className="space-y-2 h-[400px] overflow-y-auto pr-2 custom-scrollbar">
                     {[
                       { value: 'all', label: t('all') },
-                      { value: 'skincare', label: t('skincare') },
-                      { value: 'makeup', label: t('makeup') },
-                      { value: 'bodycare', label: t('bodycare') },
-                      { value: 'sets', label: t('sets') },
-                      { value: 'fragrance', label: t('fragrance') },
+                      { value: 'cat_hyperpigmentation', label: t('cat_hyperpigmentation') },
+                      { value: 'cat_lifestyle_recovery', label: t('cat_lifestyle_recovery') },
+                      { value: 'cat_acne', label: t('cat_acne') },
+                      { value: 'cat_hair_regeneration', label: t('cat_hair_regeneration') },
+                      { value: 'cat_cellular_regeneration', label: t('cat_cellular_regeneration') },
+                      { value: 'cat_sports_performance', label: t('cat_sports_performance') },
+                      { value: 'cat_weight_loss', label: t('cat_weight_loss') },
+                      { value: 'cat_addiction_management', label: t('cat_addiction_management') },
+                      { value: 'cat_energy_support', label: t('cat_energy_support') },
+                      { value: 'cat_sleep', label: t('cat_sleep') },
+                      { value: 'cat_heart_health', label: t('cat_heart_health') },
+                      { value: 'cat_immune_support', label: t('cat_immune_support') },
+                      { value: 'cat_pms', label: t('cat_pms') },
+                      { value: 'cat_joint_mobility', label: t('cat_joint_mobility') },
+                      { value: 'cat_chronic_fatigue', label: t('cat_chronic_fatigue') },
+                      { value: 'cat_cognitive_health', label: t('cat_cognitive_health') },
+                      { value: 'cat_blood_pressure', label: t('cat_blood_pressure') },
+                      { value: 'cat_cholesterol', label: t('cat_cholesterol') },
+                      { value: 'cat_nervous_system', label: t('cat_nervous_system') },
+                      { value: 'cat_bone_teeth', label: t('cat_bone_teeth') },
+                      { value: 'cat_anxiety', label: t('cat_anxiety') },
+                      { value: 'cat_eye_health', label: t('cat_eye_health') },
+                      { value: 'cat_liver_health', label: t('cat_liver_health') },
+                      { value: 'cat_menopause', label: t('cat_menopause') }
                     ].map((cat) => (
                       <label key={cat.value} className="flex items-center cursor-pointer group">
                         <input
@@ -173,9 +118,9 @@ export default function Products() {
                   <div className="space-y-2">
                     {[
                       { value: 'all', label: t('all') },
-                      { value: 'under1m', label: t('under1m') },
-                      { value: '1m-2m', label: t('1mTo2m') },
-                      { value: 'over2m', label: t('over2m') },
+                      { value: 'under5k', label: t('under5k') },
+                      { value: '5k-7k', label: t('5kTo7k') },
+                      { value: 'over7k', label: t('over7k') },
                     ].map((range) => (
                       <label key={range.value} className="flex items-center cursor-pointer group">
                         <input
@@ -204,8 +149,8 @@ export default function Products() {
                 </p>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredProducts.map((product) => (
-                  <ProductCard key={product.id} {...product} />
+                {filteredProducts.map((product, index) => (
+                  <ProductCard key={product.id} {...product} priority={index < 6} />
                 ))}
               </div>
               {filteredProducts.length === 0 && (

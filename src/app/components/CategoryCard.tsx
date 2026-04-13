@@ -17,7 +17,7 @@ export function CategoryCard({ name, image, href }: CategoryCardProps) {
         <ImageWithFallback
           src={image}
           alt={name}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          className="w-full h-full object-contain p-6 bg-white transition-transform duration-700 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
         <div className="absolute bottom-0 left-0 right-0 p-6">
