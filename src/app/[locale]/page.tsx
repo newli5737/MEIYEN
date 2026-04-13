@@ -160,7 +160,7 @@ export default function Home() {
             >
               {t('bestSellers')}
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-gray-700 max-w-2xl mx-auto leading-relaxed">
               {t('bestSellersDesc')}
             </p>
           </div>
@@ -191,7 +191,7 @@ export default function Home() {
             >
               {t('categories')}
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-gray-700 max-w-2xl mx-auto leading-relaxed">
               {t('categoriesDesc')}
             </p>
           </div>
@@ -214,10 +214,10 @@ export default function Home() {
               >
                 {t('brandStory')}
               </h2>
-              <p className="text-gray-600 leading-relaxed mb-6">
+              <p className="text-gray-700 leading-relaxed mb-6">
                 {t('brandStoryP1')}
               </p>
-              <p className="text-gray-600 leading-relaxed mb-8">
+              <p className="text-gray-700 leading-relaxed mb-8">
                 {t('brandStoryP2')}
               </p>
               <Link
@@ -251,7 +251,7 @@ export default function Home() {
             >
               {t('customerReviews')}
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-gray-700 max-w-2xl mx-auto leading-relaxed">
               {t('customerReviewsDesc')}
             </p>
           </div>

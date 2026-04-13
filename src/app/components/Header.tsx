@@ -39,7 +39,7 @@ export function Header() {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center" aria-label="Home">
             <span className="text-2xl tracking-[0.2em] font-light" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               MEIYEN
             </span>
@@ -66,6 +66,7 @@ export function Header() {
               <Search className="w-5 h-5" />
             </button>
             <select
+              aria-label="Select Language"
               value={locale}
               onChange={(e) => router.replace(pathname, { locale: e.target.value })}
               className="text-gray-700 hover:text-[var(--gold)] bg-transparent text-sm focus:outline-none cursor-pointer transition-colors"

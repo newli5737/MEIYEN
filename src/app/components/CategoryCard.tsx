@@ -27,7 +27,7 @@ export function CategoryCard({ name, image, href }: CategoryCardProps) {
           >
             {name}
           </h3>
-          <p className="text-white/90 text-sm">{exploreText}</p>
+          <p className="text-white text-sm">{exploreText}</p>
         </div>
     </Link>
   );

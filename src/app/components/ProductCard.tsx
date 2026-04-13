@@ -22,7 +22,7 @@ export function ProductCard({ id, slug, name, price, image, images, rating = 5, 
 
   return (
     <div className="group cursor-pointer">
-      <Link href={`/products/${slug}`}>
+      <Link href={`/products/${slug}`} aria-label={name}>
         <div className="relative overflow-hidden rounded-2xl bg-[var(--beige)] mb-4 aspect-square">
           <ImageWithFallback
             src={imgSrc}
@@ -43,7 +43,7 @@ export function ProductCard({ id, slug, name, price, image, images, rating = 5, 
       </Link>
       
       <div className="space-y-2">
-        <Link href={`/products/${slug}`}>
+        <Link href={`/products/${slug}`} aria-label={name}>
           <h3 className="group-hover:text-[var(--gold)] transition-colors">{name}</h3>
         </Link>
         
@@ -56,7 +56,7 @@ export function ProductCard({ id, slug, name, price, image, images, rating = 5, 
               }`}
             />
           ))}
-          <span className="text-sm text-gray-500 ml-2">({rating}.0)</span>
+          <span className="text-sm text-gray-600 ml-2">({rating}.0)</span>
         </div>
         
         <div className="flex items-center">

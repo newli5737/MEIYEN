@@ -13,7 +13,7 @@ export function Footer() {
             <div className="text-3xl tracking-[0.2em] font-light mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               MEIYEN
             </div>
-            <p className="text-gray-600 text-sm leading-relaxed mb-4">
+            <p className="text-gray-700 text-sm leading-relaxed mb-4">
               {t('brandDesc')}
             </p>
             <div className="flex space-x-4">
@@ -23,31 +23,31 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="mb-4">{t('quickLinks')}</h4>
+            <h3 className="mb-4">{t('quickLinks')}</h3>
             <ul className="space-y-2">
-              <li><Link href="/about" className="text-gray-600 text-sm hover:text-[var(--gold)] transition-colors">{t('about')}</Link></li>
-              <li><Link href="/products" className="text-gray-600 text-sm hover:text-[var(--gold)] transition-colors">{t('products')}</Link></li>
+              <li><Link href="/about" className="text-gray-700 text-sm hover:text-[var(--gold)] hover:underline transition-all">{t('about')}</Link></li>
+              <li><Link href="/products" className="text-gray-700 text-sm hover:text-[var(--gold)] hover:underline transition-all">{t('products')}</Link></li>
 
-              <li><Link href="/contact" className="text-gray-600 text-sm hover:text-[var(--gold)] transition-colors">{t('contact')}</Link></li>
+              <li><Link href="/contact" className="text-gray-700 text-sm hover:text-[var(--gold)] hover:underline transition-all">{t('contact')}</Link></li>
             </ul>
           </div>
 
           {/* Customer Service */}
           <div>
-            <h4 className="mb-4">{t('policies')}</h4>
+            <h3 className="mb-4">{t('policies')}</h3>
             <ul className="space-y-3">
-              <li><span className="text-gray-600 text-sm">{t('returnPolicy')}</span></li>
-              <li><span className="text-gray-600 text-sm">{t('privacy')}</span></li>
-              <li><span className="text-gray-600 text-sm">{t('terms')}</span></li>
-              <li><span className="text-gray-600 text-sm">{t('buyingGuide')}</span></li>
+              <li><span className="text-gray-700 text-sm">{t('returnPolicy')}</span></li>
+              <li><span className="text-gray-700 text-sm">{t('privacy')}</span></li>
+              <li><span className="text-gray-700 text-sm">{t('terms')}</span></li>
+              <li><span className="text-gray-700 text-sm">{t('buyingGuide')}</span></li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h4 className="mb-4">{t('contactInfo')}</h4>
+            <h3 className="mb-4">{t('contactInfo')}</h3>
             <ul className="space-y-3">
-              <li className="flex items-center text-gray-600 text-sm">
+              <li className="flex items-center text-gray-700 text-sm">
                 <Phone className="w-4 h-4 mr-2" />
                 <span>1900 1234</span>
               </li>
