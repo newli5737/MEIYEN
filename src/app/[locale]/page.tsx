@@ -222,6 +222,7 @@ export default function Home() {
               </p>
               <Link
                 href="/about"
+                aria-label={t('brandStory')}
                 className="inline-flex items-center text-[var(--gold)] hover:text-[var(--gold-light)] transition-colors"
               >
                 {t('learnMore')}
