@@ -23,12 +23,15 @@ export function ReviewCard({ name, avatar, rating, review }: ReviewCardProps) {
           <h4>{name}</h4>
           <div className="flex items-center space-x-1 mt-1">
             {[...Array(5)].map((_, i) => (
-              <Star
-                key={i}
-                className={`w-4 h-4 ${
-                  i < rating ? 'fill-[var(--gold)] text-[var(--gold)]' : 'text-gray-300'
-                }`}
-              />
+              <div key={i} className="relative inline-block">
+                <Star className="w-4 h-4 text-gray-300" />
+                <div 
+                  className="absolute inset-0 overflow-hidden" 
+                  style={{ width: i < Math.floor(rating) ? '100%' : i === Math.floor(rating) ? `${(rating % 1) * 100}%` : '0%' }}
+                >
+                  <Star className="w-4 h-4 fill-[var(--gold)] text-[var(--gold)] max-w-none" />
+                </div>
+              </div>
             ))}
           </div>
         </div>
